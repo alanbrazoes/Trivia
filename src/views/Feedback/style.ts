@@ -10,5 +10,5 @@ export const ViewPage = styled.View`
   align-items: center;
   flex: 1;
   justify-content: center;
-  padding: ${StatusBar.currentHeight}
+  padding-top: ${StatusBar.currentHeight}
 `
