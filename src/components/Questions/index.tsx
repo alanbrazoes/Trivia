@@ -9,7 +9,6 @@ import { ContextTimer } from '../../context/timer'
 import { ButtonNext, TextBtn } from './Style'
 import { INavigation } from '../../types'
 import Answers from '../Answers'
-import Timer from '../Timer'
 
 interface ILevel {
   [key: string]: number
@@ -27,7 +26,12 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
   const [isDisable, setIsDisable] = useState(false)
   const [isVisible, setIsvisible] = useState(false)
 
-  useEffect(() => () => setCurrentQuestion(0), [])
+  useEffect(() => {
+    return (
+      setCurrentQuestion(0),
+      setTimer(30)
+    )
+  }, [])
 
   useEffect(() => {
     if (data) {
@@ -92,7 +96,6 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
               <TextBtn>See Results</TextBtn>
             </ButtonNext>
           ))}
-        <Timer />
       </>
     </View>
   )

@@ -3,6 +3,7 @@ import React from 'react'
 import { View, SafeAreaView, StyleSheet, StatusBar } from 'react-native'
 import Questions from '../../components/Questions'
 import Score from '../../components/Score'
+import Timer from '../../components/Timer'
 import { INavigation } from '../../types'
 
 const Game: React.FC<INavigation> = ({ navigation }) => (
@@ -10,6 +11,7 @@ const Game: React.FC<INavigation> = ({ navigation }) => (
     <View style={style.container}>
       <Score/>
       <Questions navigation={navigation}/>
+      <Timer />
     </View>
   </SafeAreaView>
 )

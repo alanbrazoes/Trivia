@@ -6,13 +6,19 @@ import { ContextTimer } from '../../context/timer'
 const Timer: React.FC = () => {
   const { timer, setTimer, paused } = useContext(ContextTimer)
 
+  let time: ReturnType<typeof setTimeout> | any = null
+
   useEffect(() => {
     if (!paused && timer > 0) {
-      setTimeout(() => {
+      time = setTimeout(() => {
         setTimer(timer - 1)
       }, 1000)
     }
-  })
+  }, [timer, paused])
+
+  useEffect(() => () => clearTimeout(time))
+
+  time()
 
   return (
     <View style={ styles.container }>
