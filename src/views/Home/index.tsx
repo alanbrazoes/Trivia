@@ -8,6 +8,7 @@ import { INavigation } from '../../types'
 
 const Home: React.FC<INavigation> = ({ navigation }) => {
   const INITIAL_VALUE: IPlayer = { name: '', score: 0 }
+  console.log(StatusBar.currentHeight)
 
   const { setPlayer } = useContext(ContextPlayer)
   const { control, handleSubmit, formState: { errors }, reset } = useForm<IPlayer>({
