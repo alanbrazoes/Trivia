@@ -9,6 +9,7 @@ import { ContextTimer } from '../../context/timer'
 import { ButtonNext, TextBtn } from './Style'
 import { INavigation } from '../../types'
 import Answers from '../Answers'
+import Timer from '../Timer'
 
 interface ILevel {
   [key: string]: number
@@ -91,6 +92,7 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
               <TextBtn>See Results</TextBtn>
             </ButtonNext>
           ))}
+        <Timer />
       </>
     </View>
   )
