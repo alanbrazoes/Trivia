@@ -6,7 +6,7 @@ import { ContextTimer } from '../../context/timer'
 const Timer: React.FC = () => {
   const { timer, setTimer, paused } = useContext(ContextTimer)
 
-  let time = () => null
+  let time: any = () => null
 
   useEffect(() => {
     if (!paused && timer > 0) {
