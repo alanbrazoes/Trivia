@@ -1,0 +1,41 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In 2015, David Hasselhof released a single called...",
+      "correct_answer": "True Survivor",
+      "incorrect_answers": [
+        "True Fighter",
+        "Real Kung-Fury",
+        "Real Warrior"
+      ]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "The 1985 Toyota Corolla &quot;AE86&quot; was the hero car for what anime? ",
+      "correct_answer": "Initial D",
+      "incorrect_answers": [
+        "Wangan Midnight",
+        "Ghost MF",
+        "Ex Driver"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In Romance of the Three Kingdoms, who was not a member of the Peach Garden Oath?",
+      "correct_answer": "Zhao Yun",
+      "incorrect_answers": [
+        "Liu Bei",
+        "Guan Yu",
+        "Zhang Fei"
+      ]
+    }
+  ]
+}
