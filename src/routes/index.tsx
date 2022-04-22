@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Home from '../views/Home'
 import Game from '../views/Game'
 import Feedback from '../views/Feedback'
+import Rules from '../views/Rules'
 
 const Stack = createNativeStackNavigator()
 
@@ -30,6 +31,15 @@ const Routes = () => {
         <Stack.Screen
           name="Feedback"
           component={Feedback}
+          options={{
+            animation: 'slide_from_right',
+            headerBackVisible: false,
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Rules"
+          component={Rules}
           options={{
             animation: 'slide_from_right',
             headerBackVisible: false,
