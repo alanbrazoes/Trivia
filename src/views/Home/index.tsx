@@ -42,6 +42,11 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
         >
           <TextBtn>Go</TextBtn>
         </ButtonGo>
+        <ButtonGo
+          onPress={() => navigation.navigate('Rules')}
+        >
+          <TextBtn>Rules</TextBtn>
+        </ButtonGo>
         {errors.name && <Text style={{ color: 'red' }}>Name is required</Text>}
       </ContainerKeyboard>
     </Container>
