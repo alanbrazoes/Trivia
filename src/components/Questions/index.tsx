@@ -59,7 +59,7 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
       const level: ILevel = {
         hard: 3, medium: 2, easy: 1
       }
-      setPlayer({ ...player, score: 10 + level[difficulty] * timer + player.score + 1 })
+      setPlayer({ ...player, score: 10 + level[difficulty] * timer + player.score })
     }
   }
 
