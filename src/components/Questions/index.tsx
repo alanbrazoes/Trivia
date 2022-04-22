@@ -10,10 +10,6 @@ import { ButtonNext, Container, TextBtn } from './Style'
 import { INavigation } from '../../types'
 import Answers from '../Answers'
 
-interface ILevel {
-  [key: string]: number
-}
-
 const Questions: React.FC<INavigation> = ({ navigation }) => {
   const { data, error, loading } = useFetch('https://opentdb.com/api.php?amount=10')
   const { setPlayer, player } = useContext<IPlayerState>(ContextPlayer)
@@ -47,19 +43,13 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
     }
   }, [currentQuestion])
 
-  const answer = (
-    option: string,
-    difficulty: string = questions[currentQuestion].difficulty
-  ) => {
+  const answer = (option: string) => {
     setPaused(true)
     setIsvisible(true)
     setIsDisable(true)
     const correct = questions ? questions[currentQuestion].correct_answer : null
     if (option === correct) {
-      const level: ILevel = {
-        hard: 3, medium: 2, easy: 1
-      }
-      setPlayer({ ...player, score: 10 + level[difficulty] * timer + player.score })
+      setPlayer({ ...player, score: 10 * timer + player.score })
     }
   }
 
@@ -72,7 +62,6 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
       {error && <Text>Error</Text>}
       <>
         <Text>Catagory: {questions[currentQuestion].category}</Text>
-        <Text>Difficulty: {questions[currentQuestion].difficulty}</Text>
         <Text>{questions[currentQuestion].question}</Text>
         <Answers answers={answers} response={answer} disable={isDisable}/>
         {currentQuestion < 9
