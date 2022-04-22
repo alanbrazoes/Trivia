@@ -1,20 +1,22 @@
 import React, { useContext, useEffect } from 'react'
 
 import { View, Text, StyleSheet } from 'react-native'
+import { ContextQuestions } from '../../context/questions'
 import { ContextTimer } from '../../context/timer'
 
 const Timer: React.FC = () => {
   const { timer, setTimer, paused } = useContext(ContextTimer)
+  const { states: { questions } } = useContext(ContextQuestions)
 
   let time: any = () => null
 
   useEffect(() => {
-    if (!paused && timer > 0) {
+    if (!paused && timer > 0 && questions.length === 10) {
       time = setTimeout(() => {
         setTimer(timer - 1)
       }, 1000)
     }
-  }, [timer, paused])
+  })
 
   useEffect(() => () => clearTimeout(time))
 
