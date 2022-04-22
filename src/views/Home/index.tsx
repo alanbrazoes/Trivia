@@ -5,7 +5,7 @@ import { Input, ButtonGo, TextBtn, Label, ContainerKeyboard } from './style'
 import { useForm, Controller } from 'react-hook-form'
 import { IPlayer } from '../../context/types'
 import { INavigation } from '../../types'
-import { Container } from '../../style/Containers'
+import AreaView from '../../components/AreaView'
 
 const Home: React.FC<INavigation> = ({ navigation }) => {
   const INITIAL_VALUE: IPlayer = { name: '', score: 0 }
@@ -22,7 +22,7 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
   }
 
   return (
-    <Container>
+    <AreaView>
       <ContainerKeyboard>
         <Label>User</Label>
         <Controller
@@ -49,7 +49,7 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
         </ButtonGo>
         {errors.name && <Text style={{ color: 'red' }}>Name is required</Text>}
       </ContainerKeyboard>
-    </Container>
+    </AreaView>
   )
 }
 
