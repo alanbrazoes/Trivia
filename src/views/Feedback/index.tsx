@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 import { Text } from 'react-native'
 import { INavigation } from '../../types'
-import { Container, ViewPage } from './style'
+import { Container, ViewPage } from '../../style/Containers'
 
 const Feedback: React.FC<INavigation> = ({ navigation }) => {
   useEffect(() => {

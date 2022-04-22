@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import { StyleSheet, StatusBar, SafeAreaView, Text } from 'react-native'
+import { Text } from 'react-native'
 import { ContextPlayer } from '../../context/player'
-import { Container, Input, ButtonGo, TextBtn, Label } from './style'
+import { Input, ButtonGo, TextBtn, Label, ContainerKeyboard } from './style'
 import { useForm, Controller } from 'react-hook-form'
 import { IPlayer } from '../../context/types'
 import { INavigation } from '../../types'
+import { Container } from '../../style/Containers'
 
 const Home: React.FC<INavigation> = ({ navigation }) => {
   const INITIAL_VALUE: IPlayer = { name: '', score: 0 }
@@ -21,8 +22,8 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView style={style.container}>
-      <Container>
+    <Container>
+      <ContainerKeyboard>
         <Label>User</Label>
         <Controller
           control={control}
@@ -42,18 +43,9 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
           <TextBtn>Go</TextBtn>
         </ButtonGo>
         {errors.name && <Text style={{ color: 'red' }}>Name is required</Text>}
-      </Container>
-    </SafeAreaView>
+      </ContainerKeyboard>
+    </Container>
   )
 }
-
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: StatusBar.currentHeight,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
 
 export default Home

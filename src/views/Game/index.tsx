@@ -4,7 +4,7 @@ import Questions from '../../components/Questions'
 import Score from '../../components/Score'
 import Timer from '../../components/Timer'
 import { INavigation } from '../../types'
-import { Container, ViewPage } from './style'
+import { Container, ViewPage } from '../../style/Containers'
 
 const Game: React.FC<INavigation> = ({ navigation }) => (
   <Container>
