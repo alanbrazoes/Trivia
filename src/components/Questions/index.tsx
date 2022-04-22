@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 import { IPlayerState } from '../../context/types'
 import useFetch from '../../hooks/useFetch'
 import Loading from '../Loading'
 import { ContextPlayer } from '../../context/player'
 import { ContextQuestions } from '../../context/questions'
 import { ContextTimer } from '../../context/timer'
-import { ButtonNext, TextBtn } from './Style'
+import { ButtonNext, Container, TextBtn } from './Style'
 import { INavigation } from '../../types'
 import Answers from '../Answers'
 
@@ -68,7 +68,7 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
   }
 
   return (
-    <View>
+    <Container>
       {error && <Text>Error</Text>}
       <>
         <Text>Catagory: {questions[currentQuestion].category}</Text>
@@ -97,7 +97,7 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
             </ButtonNext>
           ))}
       </>
-    </View>
+    </Container>
   )
 }
 
