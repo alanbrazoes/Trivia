@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Text } from 'react-native'
 import { ContextPlayer } from '../../context/player'
-import { Input, ButtonGo, TextBtn, Label, ContainerKeyboard } from './style'
+import { Input, ButtonGo, TextBtn, ContainerKeyboard, Content } from './style'
 import { useForm, Controller } from 'react-hook-form'
 import { IPlayer } from '../../context/types'
 import { INavigation } from '../../types'
@@ -24,30 +24,31 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
   return (
     <AreaView>
       <ContainerKeyboard>
-        <Label>User</Label>
-        <Controller
-          control={control}
-          rules={{ required: true }}
-          render={({ field: { onChange, value } }) => (
-            <Input
-              placeholder="Ex: Alan"
-              onChangeText={onChange}
-              value={value}
-            />
-          )}
-          name="name"
-        />
-        <ButtonGo
-          onPress={handleSubmit(onSubmit)}
-        >
-          <TextBtn>Go</TextBtn>
-        </ButtonGo>
-        <ButtonGo
-          onPress={() => navigation.navigate('Rules')}
-        >
-          <TextBtn>Rules</TextBtn>
-        </ButtonGo>
-        {errors.name && <Text style={{ color: 'red' }}>Name is required</Text>}
+        <Content>
+          <Controller
+            control={control}
+            rules={{ required: true }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                placeholder="User"
+                onChangeText={onChange}
+                value={value}
+              />
+            )}
+            name="name"
+          />
+          <ButtonGo
+            onPress={handleSubmit(onSubmit)}
+          >
+            <TextBtn>Go</TextBtn>
+          </ButtonGo>
+          <ButtonGo
+            onPress={() => navigation.navigate('Rules')}
+          >
+            <TextBtn>Rules</TextBtn>
+          </ButtonGo>
+          {errors.name && <Text style={{ color: 'red' }}>Name is required</Text>}
+        </Content>
       </ContainerKeyboard>
     </AreaView>
   )
