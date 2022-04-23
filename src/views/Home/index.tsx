@@ -6,6 +6,7 @@ import { useForm, Controller } from 'react-hook-form'
 import { IPlayer } from '../../context/types'
 import { INavigation } from '../../types'
 import AreaView from '../../components/AreaView'
+import theme from '../../style/theme'
 
 const Home: React.FC<INavigation> = ({ navigation }) => {
   const INITIAL_VALUE: IPlayer = { name: '', score: 0 }
@@ -22,7 +23,7 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
   }
 
   return (
-    <AreaView>
+    <AreaView background={theme.colors.background.primary}>
       <ContainerKeyboard>
         <Content>
           <Controller
