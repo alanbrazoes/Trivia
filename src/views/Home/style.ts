@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-import theme from '../../style/theme'
 import { Dimensions } from 'react-native'
 
 const heigth = Dimensions.get('window').height
@@ -9,7 +8,7 @@ export const ContainerKeyboard = styled.KeyboardAvoidingView`
   height: 100%;
   justify-content: center;
   padding: 20%;
-  background-color: ${theme.colors.background.primary};
+  background-color: ${({ theme }) => theme.colors.background.primary};
 `
 
 export const Content = styled.View`
