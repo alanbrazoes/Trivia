@@ -25,7 +25,7 @@ export const Input = styled.TextInput`
   padding-right: 8px;
   padding-top: 2px;
   padding-bottom: 2px;
-  height: ${heigth / 20};
+  height: ${heigth / 20}px;
   align-items: center;
   justify-content: center;
   font-size: 18px;
