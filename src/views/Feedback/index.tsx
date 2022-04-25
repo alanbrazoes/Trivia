@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
-
-import { Text } from 'react-native'
 import { INavigation } from '../../types'
 import { ViewPage } from '../../style/Containers'
 import AreaView from '../../components/AreaView'
+import Result from '../../components/Feedback'
 
 const Feedback: React.FC<INavigation> = ({ navigation }) => {
   useEffect(() => {
@@ -13,9 +12,9 @@ const Feedback: React.FC<INavigation> = ({ navigation }) => {
   }, [])
 
   return (
-    <AreaView>
+    <AreaView background='red'>
       <ViewPage>
-        <Text>Feedback</Text>
+        <Result />
       </ViewPage>
     </AreaView>
   )
