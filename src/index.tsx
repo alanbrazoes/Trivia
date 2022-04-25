@@ -8,15 +8,15 @@ import theme from './style/theme'
 
 const App = () => {
   return (
-    <StatePlayer>
-      <StateTimer>
-        <StateQuestion>
-          <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <StatePlayer>
+        <StateTimer>
+          <StateQuestion>
             <Routes />
-          </ThemeProvider>
-        </StateQuestion>
-      </StateTimer>
-    </StatePlayer>
+          </StateQuestion>
+        </StateTimer>
+      </StatePlayer>
+    </ThemeProvider>
   )
 }
 
