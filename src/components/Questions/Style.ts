@@ -18,9 +18,13 @@ export const TextBtn = styled.Text`
   font-size: 15px;
 `
 
-export const ButtonNext = styled.Pressable`
+interface IButton {
+  visible: boolean
+}
+
+export const ButtonNext = styled.Pressable<IButton>`
   background-color: green;
-  display: flex;
+  opacity: ${({ visible }) => visible ? 1 : 0};
   align-items: center;
   padding: 8px;
   margin: 2px 0;

@@ -20,6 +20,7 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
   const { timer, setPaused, setTimer } = useContext(ContextTimer)
 
   const [isDisable, setIsDisable] = useState(false)
+  const [isDisableNext, setIsDisableNext] = useState(true)
   const [isVisible, setIsvisible] = useState(false)
 
   useEffect(() => {
@@ -47,6 +48,7 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
     setPaused(true)
     setIsvisible(true)
     setIsDisable(true)
+    setIsDisableNext(false)
     const correct = questions ? questions[currentQuestion].correct_answer : null
     if (option === correct) {
       setPlayer({ ...player, score: 10 * timer + player.score })
@@ -57,34 +59,40 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
     return <Loading />
   }
 
+  const { category, question } = questions[currentQuestion]
+
   return (
     <Container>
       {error && <Text>Error</Text>}
       <>
-        <Text>Catagory: {questions[currentQuestion].category}</Text>
-        <Text>{questions[currentQuestion].question}</Text>
+        <Text>Catagory: {category}</Text>
+        <Text>{question}</Text>
         <Answers answers={answers} response={answer} disable={isDisable}/>
         {currentQuestion < 9
-          ? (isVisible && (
+          ? (
             <ButtonNext
               onPress={() => {
+                setIsDisableNext(true)
                 setCurrentQuestion(currentQuestion + 1)
                 setIsDisable(false)
                 setIsvisible(false)
                 setPaused(false)
                 setTimer(30)
               }}
-              disabled={false}
+              visible={isVisible}
+              disabled={isDisableNext}
             >
               <TextBtn>Next</TextBtn>
-            </ButtonNext>))
-          : (isVisible && (
+            </ButtonNext>)
+          : (
             <ButtonNext
+              disabled={isDisableNext}
+              visible={isVisible}
               onPress={() => navigation?.navigate('Feedback')}
             >
               <TextBtn>See Results</TextBtn>
             </ButtonNext>
-          ))}
+          )}
       </>
     </Container>
   )

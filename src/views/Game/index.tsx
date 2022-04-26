@@ -8,7 +8,7 @@ import { ViewPage } from '../../style/Containers'
 import AreaView from '../../components/AreaView'
 
 const Game: React.FC<INavigation> = ({ navigation }) => (
-  <AreaView background='red'>
+  <AreaView background='darkblue'>
     <ViewPage>
       <Score/>
       <Questions navigation={navigation}/>
