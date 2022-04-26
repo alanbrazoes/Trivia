@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
 import { ContextPlayer } from '../../context/player'
-import { Container } from './styles'
+import { INavigation } from '../../types'
+import { GoBack, TextBtn } from './styles'
 
-const Result: React.FC = () => {
+const Result: React.FC<INavigation> = ({ navigation }) => {
   const { player: { score } } = useContext(ContextPlayer)
 
   const feedback = () => {
@@ -13,10 +14,13 @@ const Result: React.FC = () => {
   }
 
   return (
-    <Container>
+    <View>
       <Text>Score: {score}</Text>
       {feedback()}
-    </Container>
+      <GoBack onPress={() => navigation.navigate('Home')}>
+        <TextBtn>Jogar novamente</TextBtn>
+      </GoBack>
+    </View>
   )
 }
 

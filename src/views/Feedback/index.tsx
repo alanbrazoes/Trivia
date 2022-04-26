@@ -14,7 +14,7 @@ const Feedback: React.FC<INavigation> = ({ navigation }) => {
   return (
     <AreaView background='red'>
       <ViewPage>
-        <Result />
+        <Result navigation={navigation}/>
       </ViewPage>
     </AreaView>
   )
