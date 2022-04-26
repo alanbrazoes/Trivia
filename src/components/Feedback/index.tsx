@@ -8,9 +8,9 @@ const Result: React.FC<INavigation> = ({ navigation }) => {
   const { player: { score } } = useContext(ContextPlayer)
 
   const feedback = () => {
-    if (score >= 1800 && score < 2699) return <Text>Belo resultado</Text>
-    if (score < 1800) return <Text>Um pouco abaixo da média</Text>
-    if (score >= 2700) return <Text>Caramba, tu conhece mesmo!!</Text>
+    if (score >= 1800 && score < 2699) return <Text>Nice result!</Text>
+    if (score < 1800) return <Text>A little below average.</Text>
+    if (score >= 2700) return <Text>Damn, you really know!</Text>
   }
 
   return (
@@ -18,7 +18,7 @@ const Result: React.FC<INavigation> = ({ navigation }) => {
       <Text>Score: {score}</Text>
       {feedback()}
       <GoBack onPress={() => navigation.navigate('Home')}>
-        <TextBtn>Jogar novamente</TextBtn>
+        <TextBtn>Play again</TextBtn>
       </GoBack>
     </View>
   )
