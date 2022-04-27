@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components/native'
 import StatePlayer from './context/player'
 import StateQuestion from './context/questions'
 import StateTimer from './context/timer'

@@ -20,15 +20,15 @@ export const Content = styled.View`
 export const Input = styled.TextInput`
   border-radius: 2px;
   margin: 4px 0;
-  border: 1px solid black;
+  border: 2px solid black;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 2px;
   padding-bottom: 2px;
-  height: ${heigth / 20}px;
+  height: ${heigth / 18}px;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
 `
 
 export const ButtonGo = styled.Pressable`
