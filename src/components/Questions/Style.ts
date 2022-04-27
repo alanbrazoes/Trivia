@@ -6,7 +6,7 @@ export const Container = styled.View`
 `
 
 export const ButtonAnswers = styled.Pressable`
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.default.dark};
   display: flex;
   align-items: center;
   padding: 8px;
@@ -14,7 +14,7 @@ export const ButtonAnswers = styled.Pressable`
 `
 
 export const TextBtn = styled.Text`
-  color: white;
+  color: ${({ theme }) => theme.colors.default.light};
   font-size: 15px;
 `
 
@@ -23,7 +23,7 @@ interface IButton {
 }
 
 export const ButtonNext = styled.Pressable<IButton>`
-  background-color: green;
+  background-color: ${({ theme }) => theme.colors.background.primary};
   opacity: ${({ visible }) => visible ? 1 : 0};
   align-items: center;
   padding: 8px;

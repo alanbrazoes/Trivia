@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 
 export const ButtonAnswers = styled.Pressable`
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.default.dark};
   display: flex;
   align-items: center;
   padding: 8px;
@@ -9,6 +9,6 @@ export const ButtonAnswers = styled.Pressable`
 `
 
 export const TextBtn = styled.Text`
-  color: white;
+  color: ${({ theme }) => theme.colors.default.light};
   font-size: 15px;
 `

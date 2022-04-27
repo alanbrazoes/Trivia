@@ -12,7 +12,7 @@ export const ContainerKeyboard = styled.KeyboardAvoidingView`
 `
 
 export const Content = styled.View`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.default.light};
   padding: 16px;
   border-radius: 5px;
 `
@@ -20,7 +20,7 @@ export const Content = styled.View`
 export const Input = styled.TextInput`
   border-radius: 2px;
   margin: 4px 0;
-  border: 2px solid black;
+  border: 2px solid ${({ theme }) => theme.colors.default.dark};
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 2px;
@@ -33,7 +33,7 @@ export const Input = styled.TextInput`
 
 export const ButtonGo = styled.Pressable`
   border-radius: 2px;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.default.dark};
   display: flex;
   align-items: center;
   padding: 8px;
@@ -41,6 +41,6 @@ export const ButtonGo = styled.Pressable`
 `
 
 export const TextBtn = styled.Text`
-  color: white;
+  color: ${({ theme }) => theme.colors.default.light};
   font-size: 15px;
 `
