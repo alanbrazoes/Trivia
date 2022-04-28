@@ -6,6 +6,7 @@ export const ButtonAnswers = styled.Pressable`
   align-items: center;
   padding: 8px;
   margin: 2px 0;
+  width: 100%;
 `
 
 export const TextBtn = styled.Text`

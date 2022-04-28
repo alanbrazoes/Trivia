@@ -5,6 +5,12 @@ export const Container = styled.View`
   justify-content: center;
 `
 
+export const Text = styled.Text`
+  font-size: large;
+  margin: 4px;
+  width: 100%;
+`
+
 export const ButtonAnswers = styled.Pressable`
   background-color: ${({ theme }) => theme.colors.default.dark};
   display: flex;

@@ -4,13 +4,13 @@ import { Container } from './styles'
 
 interface IArea {
   children: React.ReactNode;
-  background: string
+  background?: string
 }
 
-const AreaView: React.FC<IArea> = ({ children, background }) => {
+const AreaView: React.FC<IArea> = ({ children }) => {
   return (
     <Container>
-      <StatusBar backgroundColor={background}/>
+      <StatusBar/>
       {children}
     </Container>
   )

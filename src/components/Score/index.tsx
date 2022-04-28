@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
-import { Text } from 'react-native'
 import { ContextPlayer } from '../../context/player'
-import { Container } from './styles'
+import { Container, Text } from './styles'
 
 const Score: React.FC = () => {
   const { player: { score, name } } = useContext(ContextPlayer)

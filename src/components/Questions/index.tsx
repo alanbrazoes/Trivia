@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Text } from 'react-native'
 import { IPlayerState } from '../../context/types'
 import useFetch from '../../hooks/useFetch'
 import Loading from '../Loading'
 import { ContextPlayer } from '../../context/player'
 import { ContextQuestions } from '../../context/questions'
 import { ContextTimer } from '../../context/timer'
-import { ButtonNext, Container, TextBtn } from './Style'
+import { ButtonNext, Container, Text, TextBtn } from './Style'
 import { INavigation } from '../../types'
 import Answers from '../Answers'
 
