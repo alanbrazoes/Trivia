@@ -16,7 +16,10 @@ const Questions: React.FC<INavigation> = ({ navigation }) => {
     states: { answers, currentQuestion, questions },
     setters: { setAnswers, setCurrentQuestion, setQuestions }
   } = useContext(ContextQuestions)
-  const { timer, setPaused, setTimer } = useContext(ContextTimer)
+  const {
+    states: { timer },
+    setters: { setPaused, setTimer }
+  } = useContext(ContextTimer)
 
   const [isDisable, setIsDisable] = useState(false)
   const [isDisableNext, setIsDisableNext] = useState(true)

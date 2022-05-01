@@ -4,7 +4,10 @@ import { ContextTimer } from '../../context/timer'
 import { ContainerTimer, Title } from './styles'
 
 const Timer: React.FC = () => {
-  const { timer, setTimer, paused } = useContext(ContextTimer)
+  const {
+    states: { paused, timer },
+    setters: { setTimer }
+  } = useContext(ContextTimer)
   const { states: { questions } } = useContext(ContextQuestions)
 
   let time: any = () => null

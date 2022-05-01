@@ -11,10 +11,14 @@ interface IPlayerState {
 }
 
 interface ITimer {
-  timer: number;
-  paused: boolean;
-  setPaused: React.Dispatch<React.SetStateAction<boolean>>;
-  setTimer: React.Dispatch<React.SetStateAction<number>>
+  states: {
+    timer: number;
+    paused: boolean;
+  }
+  setters: {
+    setPaused: React.Dispatch<React.SetStateAction<boolean>>;
+    setTimer: React.Dispatch<React.SetStateAction<number>>
+  }
 }
 
 interface IQuestion {

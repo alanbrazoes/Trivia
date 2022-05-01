@@ -8,8 +8,11 @@ const StateTimer: React.FC<Props> = ({ children }) => {
   const [timer, setTimer] = useState(30)
   const [paused, setPaused] = useState(false)
 
+  const states = { timer, paused }
+  const setters = { setPaused, setTimer }
+
   return (
-    <ContextTimer.Provider value={{ timer, setTimer, paused, setPaused }}>
+    <ContextTimer.Provider value={{ states, setters }}>
       {children}
     </ContextTimer.Provider>
   )
