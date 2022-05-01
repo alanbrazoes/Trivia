@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { IPlayerState } from '../../context/types'
+import { IPlayerState } from '../../types/states'
 import useFetch from '../../hooks/useFetch'
 import Loading from '../Loading'
 import { ContextPlayer } from '../../context/player'
