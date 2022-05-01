@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { Props } from '../types'
-import { IQuestions, IQuestion } from './types'
+import { IQuestions, IQuestion } from '../types/states'
 
 export const INITIAL_STATE = [{
   category: '',

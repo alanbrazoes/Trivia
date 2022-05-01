@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
-import { Props, ITimer } from './types'
+import { ITimer } from '../types/states'
+import { Props } from '../types'
 
 export const ContextTimer = createContext({} as ITimer)
 

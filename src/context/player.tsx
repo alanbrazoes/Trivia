@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { Props } from '../types'
-import { IPlayer, IPlayerState } from './types'
+import { IPlayer, IPlayerState } from '../types/states'
 
 export const ContextPlayer = createContext({} as IPlayerState)
 
