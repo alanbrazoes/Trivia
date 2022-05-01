@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { IQuestion } from '../context/types'
+import { IQuestion } from '../types/states'
 
 function useFetch (url: string) {
   const [data, setData] = useState<IQuestion[]>()
