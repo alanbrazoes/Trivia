@@ -1,6 +1,5 @@
 import React from 'react'
-import { StatusBar } from 'react-native'
-import { Container } from './styles'
+import { SafeAreaView, StatusBar } from 'react-native'
 
 interface IArea {
   children: React.ReactNode;
@@ -9,10 +8,10 @@ interface IArea {
 
 const AreaView: React.FC<IArea> = ({ children }) => {
   return (
-    <Container>
+    <SafeAreaView style={{ flex: 1 }}>
       <StatusBar/>
       {children}
-    </Container>
+    </SafeAreaView>
   )
 }
 
