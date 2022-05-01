@@ -33,7 +33,6 @@ const Routes = () => {
           component={Feedback}
           options={{
             animation: 'slide_from_right',
-            headerBackVisible: false,
             headerShown: false
           }}
         />
@@ -42,7 +41,6 @@ const Routes = () => {
           component={Rules}
           options={{
             animation: 'slide_from_right',
-            headerBackVisible: false,
             headerShown: false
           }}
         />
