@@ -7,11 +7,11 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest",
+    "test": "jest -u",
     "eject": "expo eject"
   },
   "jest": {
-    "preset": "jest-expo",
+    "preset": "react-native",
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
     ]
@@ -39,8 +39,10 @@
     "@babel/core": "^7.12.9",
     "@testing-library/jest-native": "^4.0.4",
     "@testing-library/react-native": "^9.1.0",
+    "@types/jest": "^27.4.1",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
+    "@types/react-test-renderer": "^18.0.0",
     "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
