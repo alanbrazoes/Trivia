@@ -1,9 +1,16 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import 'react-native'
+import { render } from '@testing-library/react-native'
 import Home from '../src/views/Home'
+import { ThemeProvider } from 'styled-components/native'
+import theme from '../src/style/theme'
 
-describe('Aleatório', () => {
-  test('1', () => {
-    renderer.create(<Home />)
+describe('Home screen.', () => {
+  test('1 - Should have render Home screen.', () => {
+    render(
+      <ThemeProvider theme={theme}>
+        <Home />
+      </ThemeProvider>
+    )
   })
 })
