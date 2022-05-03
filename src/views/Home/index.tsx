@@ -34,17 +34,20 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
                 placeholder="User"
                 onChangeText={onChange}
                 value={value}
+                testID="inputUser"
               />
             )}
             name="name"
           />
           <ButtonGo
             onPress={handleSubmit(onSubmit)}
+            testID="buttonGame"
           >
             <TextBtn>Go</TextBtn>
           </ButtonGo>
           <ButtonGo
             onPress={() => navigation.navigate('Rules')}
+            testID="buttonRules"
           >
             <TextBtn>Rules</TextBtn>
           </ButtonGo>
