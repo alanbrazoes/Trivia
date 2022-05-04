@@ -3,7 +3,7 @@ import { Text } from 'react-native'
 import { ContextPlayer } from '../../context/player'
 import { Input, ButtonGo, TextBtn, ContainerKeyboard, Content } from './style'
 import { useForm, Controller } from 'react-hook-form'
-import { IPlayer } from '../../context/types'
+import { IPlayer } from '../../types/states'
 import { INavigation } from '../../types'
 import AreaView from '../../components/AreaView'
 import theme from '../../style/theme'
@@ -34,17 +34,20 @@ const Home: React.FC<INavigation> = ({ navigation }) => {
                 placeholder="User"
                 onChangeText={onChange}
                 value={value}
+                testID="inputUser"
               />
             )}
             name="name"
           />
           <ButtonGo
             onPress={handleSubmit(onSubmit)}
+            testID="buttonGame"
           >
             <TextBtn>Go</TextBtn>
           </ButtonGo>
           <ButtonGo
             onPress={() => navigation.navigate('Rules')}
+            testID="buttonRules"
           >
             <TextBtn>Rules</TextBtn>
           </ButtonGo>
