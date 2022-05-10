@@ -1,9 +1,8 @@
 import React from 'react'
 import { Text } from 'react-native'
 import AreaView from '../../components/AreaView'
-import { ViewPage } from '../../style/Containers'
 import { INavigation } from '../../types'
-import { Button, TextBtn } from './styles'
+import { Button, TextBtn, ViewPage } from './styles'
 
 const Rules: React.FC<INavigation> = ({ navigation }) => {
   return (
